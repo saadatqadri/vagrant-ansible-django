@@ -1,6 +1,6 @@
 # Python Django Ansible
 
-A Vagrant VM for Django development
+A quick and easy way to create a base VM for Django development.
 
 + Pip
 + VirtualEnv
