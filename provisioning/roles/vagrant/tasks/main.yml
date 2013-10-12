@@ -1,0 +1,26 @@
+- name: update apt
+  action: command /usr/bin/apt-get update
+  sudo: true
+
+- name: update cache 
+  apt: update_cache=yes
+  sudo: true
+
+- name: Install dev pkgs
+  apt: pkg=$item
+  with_items:
+    - build-essential
+    - python-dev
+    - libpq-dev
+    - libevent-dev
+    - python-pip
+    - python-setuptools
+    - git
+    - curl
+    - vim
+
+- name: pip install stuff
+  pip: name=$item
+  with_items:
+    - distribute
+    - virtualenv
