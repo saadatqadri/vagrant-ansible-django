@@ -17,7 +17,11 @@
 
 - name: add postgres user to admin group
   action: user name=postgres groups=admin append=yes
+
+- name: add vagrant user to admin group
+  action: user name=vagrant groups=admin append=yes
   
 - name: restart postgresql
   action: service name=postgresql state=restarted
   sudo: True
+
