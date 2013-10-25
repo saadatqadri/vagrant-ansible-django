@@ -1,10 +1,7 @@
 virtualenv venv --distribute
 source venv/bin/activate
 pip install django-toolbelt
-django-admin.py startproject portfolio .
-
-# If you want to use gunicorn
-echo "web: gunicorn hellodjango.wsgi" > Procfile
+django-admin.py startproject {{ app_name }} .
 
 python manage.py runserver 0.0.0.0:8000
 
