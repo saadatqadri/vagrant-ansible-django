@@ -2,7 +2,7 @@
 
 - name: install nginx
   action: apt name=nginx
-
+  
 - name: Generate the Nginx configuration file
   copy: src=app.conf.j2 dest=/etc/nginx/sites-available/app
   notify:
