@@ -34,8 +34,9 @@ cd /vagrant
 ./django.sh
 ```
 
-Inside the VM start the Django server which will now be available via http://localhost:8000
+Inside the VM start the Django server which will now be available via http://localhost:8000 or 8080 via NGINX
 
 ```
 manage.py runserver 0.0.0.0:8000
 ```
+
