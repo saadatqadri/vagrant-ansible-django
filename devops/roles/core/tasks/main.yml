@@ -26,21 +26,4 @@
   with_items:
     - distribute
     - virtualenv
-   
-# Install MySQL
- 
-- name: install mysql
-  apt: name=$item state=latest update_cache=yes
-  with_items:
-    - mysql-server
-    - mysql-client
-    - libmysqlclient-dev
-    - make
 
-- name: service mysql  
-  action: service name=mysql state=started
-  
-# Install NGINX
-
-- name: install nginx
-  action: apt name=nginx
