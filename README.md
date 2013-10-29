@@ -7,6 +7,7 @@ A quick and easy way to create a base VM for Django development.
 + Python 2.7
 + Django 1.5
 + NGINX
++ PostgreSQL
 
 ## Use
 
@@ -38,5 +39,32 @@ Inside the VM start the Django server which will now be available via http://loc
 
 ```
 manage.py runserver 0.0.0.0:8000
+```
+
+## Postgres
+
+Postgres will already be installed on your VM. To setup a new database for your application:
+
+```
+vagrant ssh
+sudo -u postgres createdb mydb
+sudo -u postgres psql
+create user myuser with password 'mypassword';
+grant all privileges on database mydb to myuser
+```
+
+Update your Django config (settings.py)
+
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mydb',
+        'USER': 'myuser',
+        'PASSWORD': 'mypassword',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 ```
 

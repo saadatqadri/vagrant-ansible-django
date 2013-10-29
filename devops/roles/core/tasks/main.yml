@@ -20,6 +20,7 @@
     - git
     - curl
     - vim
+    - python3
 
 - name: pip install stuff
   pip: name=$item
