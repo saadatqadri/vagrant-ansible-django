@@ -9,7 +9,7 @@
 # Install Python && Django packages
 
 - name: Install dev pkgs
-  apt: pkg=$item
+  apt: pkg={{ item }}
   with_items:
     - build-essential
     - python-dev
@@ -23,7 +23,7 @@
     - python3
 
 - name: pip install stuff
-  pip: name=$item
+  pip: name={{ item }}
   with_items:
     - distribute
     - virtualenv
