@@ -47,10 +47,9 @@ Postgres will already be installed on your VM. To setup a new database for your 
 
 ```
 vagrant ssh
-sudo -u postgres createdb mydb
 sudo -u postgres psql
-create user myuser with password 'mypassword';
-grant all privileges on database mydb to myuser
+alter user postgres password 'postgres';
+create database mydb;
 ```
 
 Update your Django config (settings.py)
@@ -60,8 +59,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'mydb',
-        'USER': 'myuser',
-        'PASSWORD': 'mypassword',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
         'HOST': 'localhost',
         'PORT': '',
     }
