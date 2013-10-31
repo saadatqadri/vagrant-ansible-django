@@ -21,6 +21,8 @@
     - curl
     - vim
     - python3
+    - libmemcached-dev
+    - memcached
 
 - name: pip install stuff
   pip: name={{ item }}
