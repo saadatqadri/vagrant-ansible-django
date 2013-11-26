@@ -27,6 +27,7 @@ To create a new Django project
 vagrant ssh
 cd /vagrant
 ./django.sh
+source venv/bin/activate
 ```
 
 Inside the VM start the Django server which will now be available via http://localhost:8000 or 8080 via NGINX
