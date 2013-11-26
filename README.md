@@ -2,7 +2,10 @@
 
 A quick and easy way to create a base VM for Django development.
 
+This stack is based on Ubuntu Linx, Gunicorn, Nginx and Postgresql
+
 + Pip
++ Gunicorn
 + VirtualEnv
 + Python 2.7
 + Django 1.5
