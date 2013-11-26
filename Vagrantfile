@@ -5,6 +5,8 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = 'django-vagrant'
   
   config.vm.network :private_network, ip: "33.33.33.10"
+  
+  config.vm.network :forwarded_port, guest: 8000, host: 8000
 
   config.vm.provision "ansible" do |ansible|
     ansible.playbook       = "devops/site.yml"
