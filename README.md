@@ -18,20 +18,14 @@ If you already have ansible installed then getting a Django environment running 
 vagrant up
 
 # Provision the VM
-./deploy.sh
+vagrant provision
 ```
 
 To create a new Django project
 
 ```
-vagrant up
 vagrant ssh
-
 cd /vagrant
-# The next task will setup a new project using Virtual env.
-# You will need to open this file and update the project name if you want to use it.
-# This is just to give you some pointers on how you might create a new project
-# using pip and virtualenv
 ./django.sh
 ```
 
