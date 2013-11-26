@@ -12,17 +12,19 @@
   apt: pkg={{ item }}
   with_items:
     - build-essential
-    - python-dev
     - libpq-dev
     - libevent-dev
+    - python-dev
     - python-pip
     - python-setuptools
+    - python-software-properties
+    - python3
     - git
     - curl
-    - vim
-    - python3
+    # Non essential
     - libmemcached-dev
     - memcached
+    - emacs
 
 - name: pip install stuff
   pip: name={{ item }}
