@@ -65,3 +65,16 @@ DATABASES = {
 }
 ```
 
+## Gunicorn + Nginx
+
+Install Gunicorn
+
+```
+pip install gunicorn
+gunicorn YOURAPPNAME.wsgi:application -b 0.0.0.0:8000
+```
+
+## Nginx config
+
+TODO
+
